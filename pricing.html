@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pricing</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='pricing.css') }}">
+    </head>
+    <body>
+          <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Pricing</h1>
+            <h3>We believe pricing should be straightforward, fair and affordable for all businesses.</h3>
+           
+        </div>
+    </section>
+
+     <!--Navigation Bar-->
+
+     <section class="nav-bar">
+        <div class="radio-inputs">
+
+            <label class="radio">
+                <input checked name="radio" type="radio" onclick="window.location.href='{{ url_for('home') }}'" />
+                <span class="name">Acasă</span>
+            </label>
+            
+
+            <label class="radio">
+                <input checked name="radio" type="radio" />
+                <span class="name">Clienti</span>
+                <div class="content">
+                    <a href = "">Portofoliu Web</a>
+                    <a href = "">Recomandari</a>
+                </div>
+              </label>
+
+
+              <label class="radio">
+                <input checked name="radio" type="radio" />
+                <span class="name">Servicii</span>
+                <div class="content">
+                    <a href="/servicii_web_design">Web Design</a>
+                    <a href="google_ads">Google Ads</a>
+                    <a href="comunicare_scm">Comunicare Social Media</a>
+                    <a href="#">Facebook & Instagram Ads</a>
+                    <a href="#">Email Marketing</a>
+                </div>
+            </label>
+              
+        
+
+          
+
+
+        </label>
+        </div>
+      </section>
+
+
+      <section class ="white-container1">
+        <div class = "container-white1">
+            <div class="text-content">
+                <h1>All you need to grow your business online</h1>
+            </div>
+            <div class = "paragraph-text1">
+                <p>!!!!!!MailerLite!!!!!!!   helps you easily create newsletters, email automations, landing pages, websites, and more. Affordable and backed by 24/7 award-winning support.</p>
+            </div>
+        </div>
+    </section>
+
+
+      <!--Cards-->
+<!-- Un singur container care conține toate cardurile -->
+<div class="container">
+    <div class="card">
+      <div class="content">
+        <div class="title">Advanced</div>
+        <div class="price">$39.99/month</div>
+        <div class="description">
+          <ul>
+            <li>Unlimited monthly emails</li>
+            <li>Unlimited user seats</li>
+            <li>24/7 Live chat & email support</li>
+          </ul>
+          <div class="description1">
+            <ul>
+              <span class="bold-text">All in Growing Business, plus</span><br>
+              <li>Smart sending</li>
+              <li>Facebook integration</li>
+              <li>Custom HTML editor</li>
+              <li>Promotion pop-ups</li>
+              <li>Enhanced automations</li>
+            </ul>
+          </div>
+        </div>
+        <button class="card-btn">Get Started</button>
+      </div>
+    </div>
+  
+    <!-- Al doilea card -->
+    <div class="card">
+      <div class="content">
+        <div class="title">Growing Business</div>
+        <div class="price">$14.99/month</div>
+        <div class="description">
+          <ul>
+            <li>Unlimited monthly emails</li>
+            <li>U3 user seats</li>
+            <li>24/7 Live chat & email support</li>
+          </ul>
+          <div class="description1">
+            <ul>
+              <span class="bold-text">All in Free, plus</span><br>
+              <li>Sell digital products</li>
+              <li>Unlimited templates</li>
+              <li>Dynamic emails</li>
+              <li>Campaign auto-resend</li>
+            
+            </ul>
+          </div>
+        </div>
+        <button class="card-btn">Get Started</button>
+      </div>
+    </div>
+  
+    <!-- Al treilea card -->
+    <div class="card">
+      <div class="content">
+        <div class="title">Free</div>
+        <div class="price">$0/month</div>
+        <div class="description">
+          <ul>
+            <li>12,000 monthly emails</li>
+            <li>1 user seat</li>
+            <li>24/7 Email & chat support for up to 30 days</li>
+          </ul>
+          <div class="description1">
+            <ul>
+              <span class="bold-text">Key features</span><br>
+              <li>Drag & drop editor</li>
+              <li>Email automation builder</li>
+              <li>Websites</li>
+              <li>10 landing pages</li>
+            
+            </ul>
+          </div>
+        </div>
+        <button class="card-btn">Get Started</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <section class="white-container">
+    <div class="container-white">
+
+        <!-- Textul din dreapta -->
+        <div class="text-container">
+            <h1>Keeping it Lite</h1>
+            <div class="underline"></div>
+            <p>
+                We don’t just talk the talk, we walk the walk. ????MAKETING????? started out as a small business too! See how ‘Keeping it Lite’ has helped us build a product our customers love to use.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Join thousands of successful businesses that have already taken the leap.</p>
+            <a href="/get-started">
+            <button class="rdy">
+                <span>Contacteaza-ne</span>
+                <svg width="15px" height="10px" viewBox="0 0 13 10">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </button>
+            </a>
+        </div>
+    </section>
+
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Analytics</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Security</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Your Company. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+ 
+
+
+    </body>
+</html>

@@ -1,0 +1,468 @@
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/*Navigation Bar*/
+
+/* Navbar Styling */
+.nav-bar {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15), -5px -5px 15px rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Radio Inputs Styling */
+.radio-inputs {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.radio {
+    position: relative;
+    text-align: center;
+}
+
+.radio .name {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    border-radius: 0.7rem;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Dropdown Styling */
+.radio .content {
+    display: none; /* Ascundem dropdown-ul inițial */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 150px;
+    z-index: 999;
+}
+
+.radio .content a {
+    text-decoration: none;
+    color: #0073e6;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.radio .content a:hover {
+    color: #fff;
+    background-color: #0073e6;
+}
+
+/* Show dropdown on hover */
+.radio:hover .content,
+.radio .content:hover {
+    display: flex; /* Dropdown-ul rămâne afișat */
+}
+
+/* Hover Effect for Buttons */
+.radio:hover .name {
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    transform: translateY(-1px);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.8);
+}
+
+  
+  @keyframes border-glow {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 70vh;
+    background: linear-gradient(to right, rgba(37, 99, 235, 0.9), rgba(67, 56, 202, 0.9)),
+                url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80') center/cover;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.white-container1 {
+    background-color: white; /* Alegi un fundal pentru containerul alb */
+    padding: 4rem 2rem; /* Adaugă spațiu în jurul containerului */
+}
+
+.container-white1 {
+    max-width: 1200px; /* Maximizarea lățimii containerului */
+    margin: 0 auto; /* Centrarea containerului pe pagină */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinierea la stânga */
+}
+
+.text-content h1 {
+    font-weight: bold; /* Face textul din h1 bolduit */
+    font-size: 2.5rem; /* Ajustează dimensiunea fontului, dacă este necesar */
+    margin-bottom: 1rem; /* Adaugă un spațiu sub titlu */
+}
+
+.paragraph-text1 p {
+    font-size: 1.125rem; /* Dimensiunea fontului pentru paragrafe */
+    line-height: 1.6; /* Între liniile de text */
+    color: #333; /* Culoare text pentru paragrafe */
+    max-width: 800px; /* Lățime maximă pentru paragraf */
+}
+
+
+/*cards*/
+
+/* From Uiverse.io by Yaya12085 */ 
+/* From Uiverse.io by Yaya12085 */ 
+.container {
+    display: flex; /* Folosește Flexbox pentru alinierea cardurilor */
+    justify-content: center; /* Centrează cardurile pe axa orizontală */
+    align-items: flex-start; /* Aliniază cardurile la începutul axei verticale */
+    flex-wrap: wrap; /* Permite cardurilor să se plaseze pe mai multe linii dacă nu sunt suficiente spații */
+    gap: 20px; /* Spațiu între carduri */
+    margin: 0 auto; /* Centrează containerul pe pagina web */
+    padding: 20px; /* Adaugă spațiu între marginile ferestrei și carduri */
+    max-width: 1200px; /* Optional, pentru a limita lățimea maximă a containerului */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px; /* Lățimea cardurilor */
+    height: 600px;
+    padding: 30px 1px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(33,150,243,.4), 0 4px 6px -4px rgba(33,150,243,.4);
+    border-radius: 10px;
+    background-color: #6B6ECC;
+    background: linear-gradient(45deg, #04051dea 0%, #2b566e 100%);
+    margin: 10px; /* Spațiu între carduri */
+}
+.content {
+    padding: 10px;
+}
+
+.content .price {
+    color: white;
+    font-weight: 800;
+    font-size: 30px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+}
+
+.content .description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white; /* Adăugăm linia albă aici */
+}
+
+.content .description1 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.description ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.description li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.content .title {
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.64);
+    margin-top: 10px;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.card-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: rgb(33,150,243);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+    background-color: #0056b3;
+}
+.text-container {
+    padding: 60px;
+    text-align: center; /* Centrează totul în cadrul containerului */
+}
+
+.text-container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1d1d1d; /* Culoare text */
+    line-height: 1.4;
+}
+
+.text-container .underline {
+    width: 50px;
+    height: 4px;
+    background-color: #b71c1c; /* Culoare roșie */
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto; /* Centrează linia de subliniere */
+}
+
+.text-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    text-align: center; /* Centrează textul în cadrul paragrafului */
+}
+
+
+/* Footer */
+/* Footer */
+footer {
+    background-color: #111827;
+    color: #9ca3af;
+    padding: 3rem 0;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between; /* Aranjează coloanele pe orizontală */
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-column {
+    flex: 1; /* Fiecare coloană va ocupa spațiu egal */
+}
+
+.footer-column h3 {
+    color: #fff;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #1f2937;
+    color: #fff;
+}
+
+.footer-bottom p {
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
+
+/* Responsive styling for footer */
+@media screen and (max-width: 768px) {
+    .footer-grid {
+        flex-direction: column; /* La rezoluții mici, coloanele devin pe verticală */
+        align-items: center; /* Centrarea coloanelor */
+    }
+}
+
+
+
+
+.cta {
+    background-color: #2563eb;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+
+/* From Uiverse.io by alexmaracinaru */ 
+.rdy {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .rdy:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+  }
+  
+  .rdy span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+  }
+  
+  .rdy svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .rdy:hover:before {
+    width: 100%;
+    background: #b1dae7;
+  }
+  
+  .rdy:hover svg {
+    transform: translateX(0);
+  }
+  
+  .rdy:active {
+    transform: scale(0.95);
+  }
+
+  

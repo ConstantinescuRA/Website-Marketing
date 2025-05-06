@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Business Growth Solutions</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    </head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Business Growth</h1>
+            <p>Unlock your company's potential with our innovative solutions that drive results and maximize ROI.</p>
+            <div class="hero-buttons">
+                <a href="/get-started" class="btn btn-primary">Get Started</a>
+
+
+                <a href="#" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!--Navigation Bar-->
+
+    <section class="nav-bar">
+        <div class="radio-inputs">
+
+
+            
+            <label class="radio">
+                <input checked name="radio" type="radio" />
+                <span class="name">Clienti</span>
+                <div class="content">
+                    <a href = "">Portofoliu Web</a>
+                    <a href = "">Recomandari</a>
+                </div>
+              </label>
+
+
+              <label class="radio">
+                <input checked name="radio" type="radio" />
+                <span class="name">Servicii</span>
+                <div class="content">
+                    <a href="/servicii_web_design">Web Design</a>
+                    <a href="google_ads">Google Ads</a>
+                    <a href="comunicare_scm">Comunicare Social Media</a>
+                    <a href="#">Facebook & Instagram Ads</a>
+                    <a href="#">Email Marketing</a>
+                </div>
+            </label>
+              
+          
+
+          
+
+          <label class="radio">
+            <input checked name="radio" type="radio" onclick="window.location.href='{{ url_for('pricing') }}'" />
+            <span class="name">Pricing</span>
+        </label>
+        
+        </div>
+      </section>
+    
+    
+      
+    <!----------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Us</h2>
+                <p>We deliver exceptional results through our comprehensive suite of services</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Data-Driven Insights</h3>
+                    <p>Make informed decisions with our advanced analytics</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Implementation</h3>
+                    <p>Quick deployment with minimal disruption</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Expert Team</h3>
+                    <p>Dedicated professionals at your service</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Proven Results</h3>
+                    <p>Track record of successful implementations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock assistance when you need it</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"The results we've seen since implementing their solution have been remarkable."</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Johnson</strong>
+                        <span>CEO, TechCorp</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Their team's expertise and dedication to our success made all the difference."</p>
+                    <div class="testimonial-author">
+                        <strong>Michael Chen</strong>
+                        <span>Director, Innovation Labs</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"A game-changing partnership that transformed our business operations."</p>
+                    <div class="testimonial-author">
+                        <strong>Emily Rodriguez</strong>
+                        <span>COO, StartUp Inc</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Join thousands of successful businesses that have already taken the leap.</p>
+            <a href="/get-started">
+            <button class="rdy">
+                <span>Contacteaza-ne</span>
+                <svg width="15px" height="10px" viewBox="0 0 13 10">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </button>
+            </a>
+        </div>
+    </section>
+
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Consulting</a></li>
+                        <li><a href="#">Analytics</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Your Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

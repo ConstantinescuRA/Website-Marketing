@@ -1,0 +1,721 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+
+/* Navbar Styling */
+.nav-bar {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15), -5px -5px 15px rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Radio Inputs Styling */
+.radio-inputs {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15), -5px -5px 15px rgba(255, 255, 255, 0.8);
+    padding: 0.5rem;
+    font-size: 14px;
+    width: 300px;
+}
+
+.radio {
+    position: relative;
+    text-align: center;
+    flex: 1 1 auto;
+}
+
+.radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.7rem;
+    border: none;
+    padding: 0.7rem 0;
+    color: #2d3748;
+    font-weight: 500;
+    font-family: inherit;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.7);
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.radio-input:checked + .name {
+    background: linear-gradient(145deg, #3b82f6, #2563eb);
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), inset -2px -2px 5px rgba(255, 255, 255, 0.1),
+        3px 3px 8px rgba(59, 130, 246, 0.3);
+    transform: translateY(2px);
+}
+
+.radio:hover .name {
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    transform: translateY(-1px);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Dropdown Styling */
+.radio .content {
+    display: none; /* Ascuns implicit */
+    position: absolute;
+    top: calc(100% + 10px); /* Apare sub buton, cu spațiu */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 150px;
+    z-index: 999;
+}
+
+.radio .content a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.radio .content a:hover {
+    background-color: #2563eb;
+    color: #fff;
+}
+
+/* Show dropdown on hover */
+.radio:hover .content,
+.radio .content:hover {
+    display: flex; /* Dropdown-ul rămâne afișat */
+}
+
+/* Remove animation (bucla) from dropdown */
+.radio .content::before,
+.radio .content::after {
+    display: none; /* Elimină elementele decorative din fața dropdown-ului */
+}
+
+/* Hover Effect for Buttons */
+.radio:hover .name {
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    transform: translateY(-1px);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Animation */
+.radio input:checked + .name {
+    animation: select 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes select {
+    0% {
+        transform: scale(0.95) translateY(2px);
+    }
+    50% {
+        transform: scale(1.05) translateY(-1px);
+    }
+    100% {
+        transform: scale(1) translateY(2px);
+    }
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #fff;
+    color: #2563eb;
+}
+
+.btn-primary:hover {
+    background-color: #f8fafc;
+}
+
+.btn-secondary {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Header Section */
+.main-header {
+    width: 100%;
+    height: 70vh;
+    background: linear-gradient(145deg, #1e3a8a, #2563eb);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    position: relative;
+}
+
+.main-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.main-header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #dcdcdc;
+}
+
+.main-header button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-header button:hover {
+    background: #ff4c4c;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Section White Background with Decorative Lines */
+.section-white {
+    width: 100%;
+    padding: 50px 20px;
+    position: relative;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.section-white::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('path_to_your_lines_image.png'); /* Imaginea cu linii */
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.1; /* Setează transparența pentru un efect subtil */
+    z-index: 0;
+}
+
+.section-white h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1f1f3f;
+    margin-bottom: 40px;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+/* Cards Section */
+.arguments-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    width: 300px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card .icon {
+    font-size: 3rem;
+    color: #2563eb;
+    margin: 20px auto;
+}
+
+.card .text-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f1f3f;
+    margin-bottom: 10px;
+}
+
+.card .text-body {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card .card-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.card .card-button:hover {
+    background: #1e3a8a;
+}
+/*----------------------Container1------------------------------------------------------------------------------------------------------------------------------*/
+
+.header-second {
+    margin-top: 30px;
+    background-color: #18182F;
+    padding: 50px 20px;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.header-content h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.line {
+    width: 80px;
+    height: 4px;
+    background-color: #D72638;
+    margin: 0 0 30px;
+}
+
+.arguments-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.argument {
+    background-color: #1E1E3F;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.argument:hover {
+    transform: translateY(-10px); /* Ridică boxul */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(255, 255, 255, 0.2); /* Shadow mai intens */
+    background-color: #292B49; /* Schimbă culoarea fundalului */
+}
+
+.argument p {
+    margin: 0;
+    line-height: 1.6;
+    color: #D1D1E9;
+}
+
+
+/*----------------------Container2------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.business-objectives {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    position: relative;
+}
+
+/* Layout Container */
+.container-objectives {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Text Content */
+.text-content {
+    flex: 1;
+    max-width: 50%;
+    margin-right: 20px;
+}
+
+.text-content h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #1E1E3F;
+    margin-bottom: 15px;
+}
+
+.separator-line {
+    width: 60px;
+    height: 4px;
+    background-color: #C53030;
+    margin: 10px 0;
+}
+
+.objectives-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.objectives-list li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Icon Styling */
+.objectives-list li::before {
+    content: '✔️';
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #C53030;
+}
+
+/* Image Content */
+.image-content {
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.objective-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Image */
+.objective-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*----------------------Container3------------------------------------------------------------------------------------------------------------------------------*/
+
+.roadmap {
+    background: linear-gradient(135deg, #f5f5f5, #ffffff); /* Gradient subtil spre alb */
+    color: #1e3a8a; /* Text albastru pentru continuitate */
+    position: relative;
+    padding: 50px 20px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.roadmap-title {
+    font-size: 2.5rem;
+    color: #1e3a8a; /* Albastru pentru titlu */
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@keyframes rotateBackground {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.roadmap::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle at 50% 50%, rgba(30, 58, 138, 0.1), transparent 70%); /* Gradient subtil */
+    z-index: 0;
+    animation: rotateBackground 10s linear infinite;
+}
+
+.roadmap-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.second-row {
+    margin-top: 150px; /* Separă cele două rânduri */
+    display: flex;
+    justify-content: center; /* Centrează cardurile */
+    gap: 160px; 
+}
+
+.step {
+    position: relative;
+    text-align: center;
+    width: 200px;
+}
+
+.step-content {
+    background: #ffffff; /* Fundal alb pentru carduri */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.step-content h3 {
+    font-size: 1.2rem;
+    color: #1f1f3f;
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.step-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: #1e3a8a; /* Albastru pentru consistență */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    z-index: 1;
+    border: 5px solid white;
+}
+
+/* Numerotare sub carduri */
+.step-number {
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Numerotare deasupra cardurilor */
+.step-number.top {
+    top: -30px;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .roadmap-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #111827;
+    color: #9ca3af;
+    padding: 3rem 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-column h3 {
+    color: #fff;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #1f2937;
+}
+
+/* Call-to-Action Styling */
+.cta {
+    background-color: #2563eb;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Animated Button Styling */
+.rdy {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.rdy:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.rdy span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+}
+
+.rdy svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.rdy:hover:before {
+    width: 100%;
+    background: #b1dae7;
+}
+
+.rdy:hover svg {
+    transform: translateX(0);
+}
+
+.rdy:active {
+    transform: scale(0.95);
+}

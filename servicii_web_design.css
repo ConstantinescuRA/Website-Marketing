@@ -1,0 +1,671 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playwrite+AU+SA:wght@300&family=Playwrite+IN:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+SA:wght@300&family=Playwrite+IN:wght@100..400&display=swap');
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+
+/* Navbar Styling */
+.nav-bar {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15), -5px -5px 15px rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Radio Inputs Styling */
+.radio-inputs {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.radio {
+    position: relative;
+    text-align: center;
+}
+
+.radio .name {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    border-radius: 0.7rem;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Dropdown Styling */
+.radio .content {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 150px;
+    z-index: 999;
+}
+
+.radio .content a {
+    text-decoration: none;
+    color: #0073e6;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.radio .content a:hover {
+    color: #fff;
+    background-color: #0073e6;
+}
+
+/* Show dropdown on hover */
+.radio:hover .content,
+.radio .content:hover {
+    display: flex; /* Dropdown-ul rămâne afișat */
+}
+
+/* Hover Effect for Buttons */
+.radio:hover .name {
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    transform: translateY(-1px);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.8);
+}
+
+  
+  @keyframes border-glow {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #fff;
+    color: #2563eb;
+}
+
+.btn-primary:hover {
+    background-color: #f8fafc;
+}
+
+.btn-secondary {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Header Section (Blue) */
+.main-header {
+    width: 100%;
+    height: 100vh; /* Full height */
+    background: linear-gradient(145deg, #1e3a8a, #2563eb);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.get-started-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.get-started-container p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #dcdcdc;
+}
+
+.get-started-container .back-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.get-started-container .back-link:hover {
+    color: #ffcccb;
+}
+
+/* Form Styling */
+.form .wrapper {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.form .input {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.form button {
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff6b6b;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form button:hover {
+    background-color: #e64949;
+    transform: translateY(-2px);
+}
+
+/* White Section Styling */
+.white-section {
+    background-color: #ffffff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+}
+
+.stat-item .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #2563eb;
+}
+
+.stat-item h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Why Us Section */
+.why-us h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.why-us p {
+    font-size: 1.2rem;
+    color: #666;
+}
+.container .cards{
+    display: flex; /* Plasează cardurile una lângă alta */
+    flex-wrap: wrap; /* Permite cardurilor să treacă pe rânduri noi, dacă spațiul e limitat */
+    gap: 40px; /* Spațiu între carduri */
+    justify-content: center; /* Centrează cardurile */
+    padding: 40px;
+}
+.container .cards .book{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    width: 350px;
+    height: auto;
+    overflow: visible;
+    word-wrap: break-word;
+    display: flex;
+    padding: 20px;
+    background-color: #2563eb;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    box-sizing: border-box;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+}
+.container .cards .cover{
+    top: 0;
+  position: absolute;
+  background-color:  white;/*.................................................................*/
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+}
+
+.book:hover .cover{
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+
+}
+.container .cards .book p{
+    font-size: 20px;
+    font-weight: bolder;
+    
+}
+
+.blue-container {
+    background-color: #2563eb;
+    width: 100vw; /* Acoperă întreaga lățime a ecranului */
+    padding: 20px 0; /* Spațiere verticală */
+    margin: 0; /* Elimină orice margini implicite */
+
+    
+}
+
+/* Container centrat */
+.blue-container .containers {
+    max-width: 1200px; /* Lățimea maximă pentru conținut */
+    margin: 0 auto; /* Centrează conținutul */
+    display: flex; /* Asigură poziționarea corectă */
+    align-items: center;
+    padding: 0;
+}
+
+/* Header-ul centrat */
+.blue-container .containers .header-text {
+    text-align: left;
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400; /* Greutate normală */
+}
+
+/* Wrapper pentru imagine și text */
+.blue-container .content-wrapper {
+    display: flex;
+    justify-content: flex-start; /* Imaginea rămâne la stânga */
+    align-items: center;
+    gap: 20px;
+}
+
+/* Stilizarea imaginii */
+.blue-container .image-container img {
+    max-width: 400px; /* Dimensiune maximă a imaginii */
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px; /* Margini rotunjite pe toate laturile */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0; /* Elimină spații implicite */
+}
+
+/* Paragraf stilizat */
+.blue-container .paragraph-text {
+    color: white;
+    text-align: left;
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-left: 20px; 
+    
+}
+.white-container {
+    background: #f5f5f5; /* Fundal pentru întreaga secțiune */
+    padding: 50px 0; /* Spațiu sus și jos */
+}
+
+.container-white {
+    display: flex; /* Activează Flexbox */
+    flex-wrap: wrap; /* Permite cardurilor să treacă pe mai multe rânduri dacă nu încap */
+    justify-content: center; /* Centrează cardurile pe orizontală */
+    gap: 20px; /* Spațiu între carduri */
+    margin: 0 auto; /* Centrează containerul */
+    max-width: 1200px; /* Lățime maximă a containerului */
+}
+
+.header-text1 {
+    text-align: center; /* Centrează textul */
+    font-family: 'Playfair Display', serif;
+    color: black; /* Text negru */
+    font-size: 24px; /* Dimensiune font */
+    font-weight: bold; /* Grosime font */
+    margin-bottom: 30px; /* Spațiu între header și carduri */
+    padding: 0 20px; /* Margini laterale */
+}
+/* From Uiverse.io by MikeAndrewDesigner */ 
+
+.white-container {
+    background: #f5f5f5; /* Fundal alb deschis */
+    padding: 50px 0; /* Spațiu de sus și jos */
+}
+
+.container-white {
+    display: flex; /* Activează Flexbox */
+    justify-content: center; /* Centrează cardurile pe orizontală */
+    align-items: center; /* Aliniază cardurile pe verticală */
+    gap: 20px; /* Spațiu între carduri */
+    margin: 0 auto; /* Centrează containerul pe pagină */
+   
+   
+}
+.e-card {
+    margin: 100px auto;
+    background: transparent;
+    box-shadow: 0px 8px 28px -9px rgba(0,0,0,0.45);
+    position: relative;
+    width: 300px; /* Lățimea fixă a cardului */
+    height: 400px;
+    border-radius: 16px;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  
+  .wave {
+    position: absolute;
+    width: 540px;
+    height: 700px;
+    opacity: 0.6;
+    left: 0;
+    top: 0;
+    margin-left: -50%;
+    margin-top: -70%;
+    background: linear-gradient(744deg,#af40ff,#5b42f3 60%,#00ddeb);
+  }
+  
+  .icon {
+    width: 3em;
+    margin-top: -1em;
+    padding-bottom: 1em;
+  }
+  
+  .infotop {
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    top: 5.6em;
+    left: 0;
+    right: 0;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+  }
+  
+  .name {
+    font-size: 14px;
+    font-weight: 100;
+    position: relative;
+    top: 1em;
+    text-transform: lowercase;
+  }
+  
+  .wave:nth-child(2),
+  .wave:nth-child(3) {
+    top: 210px;
+  }
+  
+  .playing .wave {
+    border-radius: 40%;
+    animation: wave 3000ms infinite linear;
+  }
+  
+  .wave {
+    border-radius: 40%;
+    animation: wave 55s infinite linear;
+  }
+  
+  .playing .wave:nth-child(2) {
+    animation-duration: 4000ms;
+  }
+  
+  .wave:nth-child(2) {
+    animation-duration: 50s;
+  }
+  
+  .playing .wave:nth-child(3) {
+    animation-duration: 5000ms;
+  }
+  
+  .wave:nth-child(3) {
+    animation-duration: 45s;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .cta {
+    background-color: #2563eb;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+
+
+
+
+
+/* From Uiverse.io by alexmaracinaru */ 
+.rdy {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .rdy:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+  }
+  
+  .rdy span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+  }
+  
+  .rdy svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .rdy:hover:before {
+    width: 100%;
+    background: #b1dae7;
+  }
+  
+  .rdy:hover svg {
+    transform: translateX(0);
+  }
+  
+  .rdy:active {
+    transform: scale(0.95);
+  }
+
+  
+
+
+
+/* Footer */
+footer {
+    background-color: #111827;
+    color: #9ca3af;
+    padding: 3rem 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-column h3 {
+    color: #fff;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #1f2937;
+}
+
+
+/* Responsivitate */
+@media (max-width: 768px) {
+    .blue-container .content-wrapper {
+        flex-direction: column; /* Imaginea și textul în coloană */
+        text-align: center;
+    }
+    .blue-container .image-container img {
+        max-width: 100%; /* Imaginea să fie pe tot ecranul */
+        margin-bottom: 20px;
+    }
+    .blue-container .paragraph-text {
+        text-align: center;
+    }
+}

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started - Business Growth Solutions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='servicii_web_design.css') }}">
+</head>
+<body>
+
+
+        <!--Navigation Bar-->
+        <section class="nav-bar">
+            <div class="radio-inputs">
+        
+                <label class="radio">
+                    <input checked name="radio" type="radio" onclick="window.location.href='{{ url_for('home') }}'" />
+                    <span class="name">Acasă</span>
+                </label>
+        
+                
+                <label class="radio">
+                    <input checked name="radio" type="radio" />
+                    <span class="name">Clienti</span>
+                    <div class="content">
+                        <a href = "">Portofoliu Web</a>
+                        <a href = "">Recomandari</a>
+                    </div>
+                  </label>
+        
+        
+                  <label class="radio">
+                    <input checked name="radio" type="radio" />
+                    <span class="name">Servicii</span>
+                    <div class="content">
+                        <a href="/servicii_web_design">Web Design</a>
+                        <a href="google_ads">Google Ads</a>
+                        <a href="comunicare_scm">Comunicare Social Media</a>
+                        <a href="#">Facebook & Instagram Ads</a>
+                        <a href="#">Email Marketing</a>
+                    </div>
+                </label>
+                  
+             
+              
+                <label class="radio">
+                    <input checked name="radio" type="radio" onclick="window.location.href='{{ url_for('pricing') }}'" />
+                    <span class="name">Pricing</span>
+                </label>
+            </div>
+          </section>
+        
+        
+
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="get-started-container">
+            <a href="index.html" class="back-link">← Back to Home</a>
+            <h1>Get Started with Our Services</h1>
+            <p>Fill in the form below to take the first step in growing your business with us!</p>
+        </div>
+
+        <form class="form" method="POST">
+            <ul class="wrapper">
+                <li style="--i:4;">
+                    <input class="input" type="text" placeholder="Name" name="name" required>
+                </li>
+                <li style="--i:3;">
+                    <input class="input" type="text" placeholder="Phone number" name="phone" required>
+                </li>
+                <li style="--i:2;">
+                    <input class="input" type="email" placeholder="E-mail" name="email" required>
+                </li>
+                <button style="--i:1;" type="submit">Submit</button>
+            </ul>
+        </form>
+        
+    </header>
+
+    <!-- White Section -->
+    <section class="white-section">
+        <div class="container">
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="icon">📈</div>
+                    <h3>250+ site-uri realizate</h3>
+                </div>
+                <div class="stat-item">
+                    <div class="icon">🤝</div>
+                    <h3>85+ clienți activi</h3>
+                </div>
+                <div class="stat-item">
+                    <div class="icon">📅</div>
+                    <h3>11 ani experiență</h3>
+                </div>
+            </div>
+            <div class="why-us">
+                <h2>De ce să alegi The Markers?</h2>
+                <p>Suntem dedicați succesului tău, oferindu-ți soluții personalizate și suport constant.</p>
+            </div>
+
+            <div class="cards">
+               
+                <div class="book">
+                    <p>                          Suntem alături de tine pe termen lung! Colaborând cu noi lunar, beneficiezi de suport continuu pentru orice ai nevoie în legătură cu site-ul și promovarea acestuia.</p>
+                    <div class="cover">
+                        <p>Suntem parteneri de cursa lunga</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <p>                             Nu suntem o simplă agenţie de webdesign. Echipa noastră este formată atât din programatori, graficieni, cât şi din consultanţi în marketing certificaţi, copywriteri şi specialişti în dezvoltare. În acest fel, beneficiezi de experienţa şi cunoştinţele care îţi pot aduce succes în afacere.</p>
+                    <div class="cover">
+                        <p>Echipa Complexa</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <p>Îți oferim soluții complete: de la redactarea textelor și realizarea graficii, la branding și programare, precum și de la conceperea strategiei de marketing până la implementarea acesteia. Totul într-un singur loc, pentru succesul afacerii tale.</p>
+                    <div class="cover">
+                        <p>Servicii integrate</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <p>Oferim soluții complete de marketing digital: campanii personalizate pe Google Ads și Facebook Ads, newslettere atractive pentru fidelizarea clienților și analize detaliate ale traficului. Monitorizăm performanța site-ului tău și îți oferim rapoarte clare, asigurând strategii eficiente pentru creșterea vizibilității și succesul afacerii tale.</p>
+                    <div class="cover">
+                        <p>Marketing digital</p>
+                    </div>
+                </div>
+                                
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="blue-container">
+        <div class="containers">
+            <div class="header-text">
+                <h1>Ce nevoi acoperim prin intermediul serviciilor de webdesign</h1>
+            </div>
+            <div class="content-wrapper">
+                <div class="image-container">
+                    <img src="static/img/web_design.jpg" alt="Web design ilustrat" />
+                </div>
+                <div class="paragraph-text">
+                    <p>☑️ Creare site de prezentare</p>
+                    <p>☑️ Servicii webdesign de programare pentru schimbări de funcționalități, design, conținut</p>
+                    <p>☑️ Servicii webdesign de programare conexe activităților de marketing: integrare instrumente Google, Facebook etc.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="white-container">
+        <div class="container-white">
+            <div class="header-text1">
+                <h1>Cum lucreaza specialistii The Markers pentru afacerea ta prin intermediul serviciului de webdesign?</h1>
+            </div>
+        
+
+<div class="e-card playing">
+  <div class="image"></div>
+  
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  
+
+      <div class="infotop">
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
+  <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674
+  4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368
+  21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204
+  22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651
+  17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784
+  14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701
+  3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476
+  19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091
+  12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466
+  16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402
+  15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864
+  19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528
+   16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68
+   20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path></svg><br>      
+   Identifica impreuna cu tine obiectivele pe care site-ul trebuie sa le indeplineasca;
+<br>
+<div class="name"></div>
+  </div>
+</div>
+
+
+
+<div class="e-card playing">
+  <div class="image"></div>
+  
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  
+
+      <div class="infotop">
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
+  <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674
+  4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368
+  21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204
+  22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651
+  17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784
+  14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701
+  3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476
+  19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091
+  12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466
+  16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402
+  15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864
+  19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528
+   16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68
+   20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path></svg><br>      
+   Creeaza un design remarcabil si continutul necesar pentru site-ul tau;
+<br>
+<div class="name"></div>
+  </div>
+</div>
+
+
+
+<div class="e-card playing">
+  <div class="image"></div>
+  
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  
+
+      <div class="infotop">
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
+  <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674
+  4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368
+  21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204
+  22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651
+  17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784
+  14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701
+  3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476
+  19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091
+  12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466
+  16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402
+  15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864
+  19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528
+   16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68
+   20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path></svg><br>      
+   Testeaza site-ul atat din punct de vedere tehnic, cat si din punct de vedere al experientei pe care utilizatorii o vor avea;
+<br>
+<div class="name"></div>
+  </div>
+</div>
+
+<div class="e-card playing">
+    <div class="image"></div>
+    
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    
+  
+        <div class="infotop">
+  
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
+    <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674
+    4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368
+    21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204
+    22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651
+    17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784
+    14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701
+    3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476
+    19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091
+    12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466
+    16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402
+    15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864
+    19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528
+     16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68
+     20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path></svg><br>      
+     Studiaza piata si consumatorii vizati de afacerea ta, precum si concurenta;
+  <br>
+  <div class="name"></div>
+    </div>
+  </div>
+
+
+  <div class="e-card playing">
+    <div class="image"></div>
+    
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    
+  
+        <div class="infotop">
+  
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
+    <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674
+    4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368
+    21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204
+    22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651
+    17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784
+    14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701
+    3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476
+    19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091
+    12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466
+    16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402
+    15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864
+    19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528
+     16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68
+     20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path></svg><br>      
+     
+Propun structura site-ului, continutul pentru acesta si functionalitatile pe care site-ul va trebui sa le aiba;
+  <br>
+  <div class="name"></div>
+    </div>
+  </div>
+
+
+  <div class="e-card playing">
+    <div class="image"></div>
+    
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    
+  
+        <div class="infotop">
+  
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon">
+    <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674
+    4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368
+    21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204
+    22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651
+    17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784
+    14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701
+    3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476
+    19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091
+    12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466
+    16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402
+    15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864
+    19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528
+     16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68
+     20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path></svg><br>      
+     Se ocupa de crearea unui site responsive ce se va adapta la toate tipurile de device-uri folosite pentru navigarea pe internet; Implementeaza actiuni SEO asupra site-ului, astfel incat acesta sa fie optimizat si usor de indexat de catre motoarele de cautare;
+  <br>
+  <div class="name"></div>
+    </div>
+  </div>
+
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Join thousands of successful businesses that have already taken the leap.</p>
+            <a href="/get-started">
+            <button class="rdy">
+                <span>Contacteaza-ne</span>
+                <svg width="15px" height="10px" viewBox="0 0 13 10">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </button>
+            </a>
+        </div>
+    </section>
+    
+    
+    
+    <!----------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Consulting</a></li>
+                            <li><a href="#">Analytics</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2024 Your Company. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started - Business Growth Solutions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='comunicare_scm.css') }}">
+</head>
+<body>
+ <!--Navigation Bar-->
+ <section class="nav-bar">
+    <div class="radio-inputs">
+
+        <label class="radio">
+            <input checked name="radio" type="radio" onclick="window.location.href='{{ url_for('home') }}'" />
+            <span class="name">Acasă</span>
+        </label>
+
+        
+        <label class="radio">
+            <input checked name="radio" type="radio" />
+            <span class="name">Clienti</span>
+            <div class="content">
+                <a href = "">Portofoliu Web</a>
+                <a href = "">Recomandari</a>
+            </div>
+          </label>
+
+
+          <label class="radio">
+            <input checked name="radio" type="radio" />
+            <span class="name">Servicii</span>
+            <div class="content">
+                <a href="/servicii_web_design">Web Design</a>
+                <a href="google_ads">Google Ads</a>
+                <a href="comunicare_scm">Comunicare Social Media</a>
+                <a href="#">Facebook & Instagram Ads</a>
+                <a href="#">Email Marketing</a>
+            </div>
+        </label>
+          
+      
+      
+      
+      <label class="radio">
+        <input checked name="radio" type="radio" onclick="window.location.href='{{ url_for('pricing') }}'" />
+        <span class="name">Pricing</span>
+    </label>
+    </div>
+  </section>
+
+      <!-- Header Section -->
+<header class="main-header">
+    <div class="get-started-container">
+
+        <h1>Get Started with Our Services</h1>
+        <p>Fill in the form below to take the first step in growing your business with us!</p>
+    </div>
+
+    <form class="form">
+        <ul class="wrapper">
+            <li style="--i:4;"><input class="input" type="text" placeholder="Name" required=""></li>
+            <li style="--i:3;"><input class="input" placeholder="Phone number" required="" name="phone"></li>
+            <li style="--i:2;"><input class="input" type="email" placeholder="E-mail" required="" name="email"></li>
+            <button style="--i:1;">Submit</button>
+        </ul>
+    </form>
+</header>
+
+<section class="content-section">
+    <div class="content-container">
+        <!-- Imaginea din stânga -->
+        <div class="content-image">
+            <img src="{{ url_for('static', filename='img/content.png') }}" alt="Imagine descriptivă" class="left-img">
+        </div>
+        <!-- Textul din dreapta -->
+        <div class="content-text">
+            <h1>De ce să fie și afacerea ta prezentă în social media?</h1>
+            <ul>
+                <li> Crești încrederea în brand.</li>
+                <li> Toată lumea este prezentă în social media.</li>
+                <li> Creezi conexiuni directe cu publicul tău țintă.</li>
+                <li> Crești traficul site-ului prin campanii.</li>
+                <li> Generarea de lead-uri pentru afacerea ta.</li>
+                <li> Ajungi la noi clienți și crești vânzările.</li>
+                <li> Ajutor SEO pentru o poziție mai bună în căutări.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!----------------------Container1------------------------------------------------------------------------------------------------------------------------------>
+
+<section class="header-container">
+    <div class="header-content">
+        <h1>Importanța rețelelor sociale pentru succesul afacerii tale</h1>
+        <div class="line"></div>
+        <div class="arguments-container">
+            <div class="argument">
+                <p>✔️ 90% dintre antreprenori consideră că social media contribuie la creșterea vizibilității afacerilor.</p>
+            </div>
+            <div class="argument">
+                <p>✔️ 70% dintre responsabilii de marketing au observat creșteri semnificative ale traficului prin social media.</p>
+            </div>
+            <div class="argument">
+                <p>✔️ Peste 80% dintre utilizatori caută în social media produse sau servicii înainte de a lua decizii de cumpărare.</p>
+            </div>
+            <div class="argument">
+                <p>✔️ Activitatea regulată în social media îmbunătățește interacțiunea cu clienții și consolidarea brandului.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!----------------------Container2------------------------------------------------------------------------------------------------------------------------------>
+
+<section class="business-objectives">
+    <div class="container-objectives">
+        <div class="text-content">
+            <h1>Ce obiective de business poți atinge prin promovare în social media:</h1>
+            <div class="separator-line"></div>
+            <ul class="objectives-list">
+                <li> Creșterea vizibilității brandului și afinității consumatorilor pentru el.</li>
+                <li> Creșterea numărului de vânzări, de clienți, de cereri de ofertă.</li>
+                <li> Creșterea traficului în site.</li>
+                <li> Creșterea semnalelor sociale și implicit a autorității site-ului în clasamentele motoarelor de căutare.</li>
+                <li> Mărirea bazei de date cu noi adrese de email.</li>
+                <li> Deschiderea unor canale de comunicare uzuale pentru clienți și potențialii clienți.</li>
+                <li> Îmbunătățirea experienței clienților prin oferirea unor servicii adaptate pieței.</li>
+            </ul>
+        </div>
+        <div class="image-content">
+            <img src="{{ url_for('static', filename='img/graphics.png') }}" alt="Imagine Promovare" class="objective-image">
+        </div>
+    </div>
+
+</section>
+<!----------------------Container3------------------------------------------------------------------------------------------------------------------------------>
+<section class="white-container">
+    <div class="container-white">
+        <div class="text-content">
+            <h1>De ce să alegi serviciile noastre de social media?</h1>
+            <div class="red-line"></div>
+        </div>
+        <div class="content-section">
+            <div class="text-column">
+                <p>✅ <strong>Experiență vastă:</strong> Avem peste 8 ani de experiență în implementarea și administrarea a peste 200 de conturi de social media, din multiple industrii și domenii de activitate.</p>
+                <p>✅ <strong>Eficiență maximă:</strong> Eliminăm timpul pierdut de tine sau de echipa ta pentru gestionarea conturilor și îți oferim oportunitatea de a te concentra pe dezvoltarea și eficientizarea afacerii.</p>
+                <p>✅ <strong>Abordare strategică:</strong> Gândim obiectiv și analizăm nevoile afacerii tale, conectându-ne atât cu clienții actuali, cât și cu cei potențiali.</p>
+                <p>✅ <strong>Mentalitate dublă:</strong> Abordăm fiecare proiect atât din perspectiva unui expert în vânzări, cât și din perspectiva unui client, oferindu-le acestora exact ceea ce își doresc de la afacerea ta.</p>
+                <p>✅ <strong>Specialist dedicat:</strong> Punem la dispoziția ta un specialist social media și un copywriter cu experiență relevantă, care se vor ocupa de conturile tale cu profesionalism și creativitate.</p>
+                <p>✅ <strong>Respectăm bunele practici:</strong> Suntem membri IAB România, ceea ce garantează respectarea standardelor și bunelor practici în marketingul online.</p>
+                <p>✅ <strong>Orientare către rezultate:</strong> Suntem concentrați pe implementarea campaniilor de promovare care livrează rezultate concrete, aliniate la obiectivele tale de business.</p>
+                <p>✅ <strong>Suport dedicat:</strong> Răspundem prompt la emailuri și apeluri și suntem întotdeauna pregătiți să te vizităm, ori de câte ori este nevoie, pentru a asigura succesul colaborării noastre.</p>
+            </div>
+            <div class="image-column">
+                <img src="{{ url_for('static', filename='img/experience.png') }}" alt="Social Media Experience" class="content-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Join thousands of successful businesses that have already taken the leap.</p>
+            <a href="/get-started">
+            <button class="rdy">
+                <span>Contacteaza-ne</span>
+                <svg width="15px" height="10px" viewBox="0 0 13 10">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </button>
+            </a>
+        </div>
+    </section>
+
+
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Analytics</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Security</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Your Company. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+ 
+
+</body>

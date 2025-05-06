@@ -1,0 +1,622 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+SA:wght@300&family=Playwrite+IN:wght@100..400&display=swap');
+
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+
+/* Navbar Styling */
+.nav-bar {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15), -5px -5px 15px rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Radio Inputs Styling */
+.radio-inputs {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.radio {
+    position: relative;
+    text-align: center;
+}
+
+.radio .name {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    border-radius: 0.7rem;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Dropdown Styling */
+.radio .content {
+    display: none; /* Ascundem dropdown-ul inițial */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 150px;
+    z-index: 999;
+}
+
+.radio .content a {
+    text-decoration: none;
+    color: #0073e6;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.radio .content a:hover {
+    color: #fff;
+    background-color: #0073e6;
+}
+
+/* Show dropdown on hover */
+.radio:hover .content,
+.radio .content:hover {
+    display: flex; /* Dropdown-ul rămâne afișat */
+}
+
+/* Hover Effect for Buttons */
+.radio:hover .name {
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    transform: translateY(-1px);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.8);
+}
+
+  
+  @keyframes border-glow {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  /* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #fff;
+    color: #2563eb;
+}
+
+.btn-primary:hover {
+    background-color: #f8fafc;
+}
+
+.btn-secondary {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Header Section (Blue) */
+.main-header {
+    width: 100%;
+    height: 100vh; /* Full height */
+    background: linear-gradient(145deg, #1e3a8a, #2563eb);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.get-started-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.get-started-container p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #dcdcdc;
+}
+
+.get-started-container .back-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.get-started-container .back-link:hover {
+    color: #ffcccb;
+}
+/* -------------Form Styling--------------------------------------------------------- */ 
+/*  */
+.form .wrapper {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.form .input {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.form button {
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff6b6b;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form button:hover {
+    background-color: #e64949;
+    transform: translateY(-2px);
+}
+
+/* Secțiunea principală */
+.content-section {
+    background-color: #fff; /* Fundal alb */
+    padding: 40px;
+    display: flex; /* Aranjare pe orizontală */
+    align-items: center; /* Centrare pe verticală */
+    justify-content: center; /* Centrare pe orizontală */
+    gap: 20px; /* Spațiu între imagine și text */
+}
+
+/* Containerul general */
+.content-container {
+    display: flex; /* Aranjare pe orizontală */
+    flex-wrap: wrap; /* Pentru mobile: elementele vor trece pe rânduri noi */
+    align-items: center; /* Centrare verticală */
+    gap: 100px; /* Spațiu între imagine și text */
+    width: 100%; /* Lățime completă */
+}
+
+/* Imaginea din stânga */
+.content-image {
+    flex: 1; /* Imaginea ocupă 50% din lățime */
+    max-width: 500px; /* Dimensiune maximă a imaginii */
+}
+
+.content-image img {
+    width: 100%; /* Imaginea se ajustează pe container */
+    height: auto; /* Păstrează proporțiile imaginii */
+    border-radius: 8px; /* Colțuri rotunjite (opțional) */
+}
+
+/* Textul din dreapta */
+.content-text {
+    flex: 1; /* Textul ocupă 50% din lățime */
+    font-family: 'Lato', sans-serif; /* Font importat */
+    color: #333;
+}
+
+.content-text h1 {
+    font-size: 32px; /* Dimensiune titlu mai mare */
+    color: #1e3a8a; /* Culoare titlu */
+    margin-bottom: 20px; /* Spațiu sub titlu */
+    font-family: 'Playfair Display', serif; /* Font importat */
+}
+
+.content-text ul {
+    list-style: none; /* Eliminare puncte de la listă */
+    padding: 0;
+    margin: 0;
+}
+
+.content-text li {
+    font-size: 18px; /* Dimensiune text paragraf mai mare */
+    line-height: 2; /* Înălțimea între linii mărită */
+    margin-bottom: 10px; /* Spațiu între elementele listei */
+    display: flex;
+    align-items: center;
+}
+
+.content-text li::before {
+    content: "✔️"; /* Iconiță de check */
+    margin-right: 10px; /* Spațiu între iconiță și text */
+    color: #1e3a8a; /* Culoare icon */
+    font-size: 20px; /* Dimensiunea iconiței */
+}
+
+
+
+.header-container {
+    background-color: #18182F;
+    padding: 50px 20px;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.header-content h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.line {
+    width: 80px;
+    height: 4px;
+    background-color: #D72638;
+    margin: 0 0 30px;
+}
+
+.arguments-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.argument {
+    background-color: #1E1E3F;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.argument:hover {
+    transform: translateY(-10px); /* Ridică boxul */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(255, 255, 255, 0.2); /* Shadow mai intens */
+    background-color: #292B49; /* Schimbă culoarea fundalului */
+}
+
+.argument p {
+    margin: 0;
+    line-height: 1.6;
+    color: #D1D1E9;
+}
+
+/* Container Principal */
+.business-objectives {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    position: relative;
+}
+
+/* Layout Container */
+.container-objectives {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Text Content */
+.text-content {
+    flex: 1;
+    max-width: 50%;
+    margin-right: 20px;
+}
+
+.text-content h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #1E1E3F;
+    margin-bottom: 15px;
+}
+
+.separator-line {
+    width: 60px;
+    height: 4px;
+    background-color: #C53030;
+    margin: 10px 0;
+}
+
+.objectives-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.objectives-list li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Icon Styling */
+.objectives-list li::before {
+    content: '✔️';
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #C53030;
+}
+
+/* Image Content */
+.image-content {
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.objective-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Image */
+.objective-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling */
+.cta-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background-color: #C53030;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #A52A2A;
+    transform: translateY(-3px);
+    box-shadow: none;
+}
+
+
+
+.white-container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: none;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.text-content {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.text-content h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 32px;
+    color:#2563eb;
+    margin-bottom: 10px;
+}
+
+.red-line {
+    width: 50px;
+    height: 4px;
+    background-color: #b71c1c;
+    margin: 0 auto 20px auto;
+}
+
+.content-section {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.text-column {
+    flex: 1;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.image-column {
+    flex: 1;
+}
+
+.content-img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+
+/* Footer */
+footer {
+    background-color: #111827;
+    color: #9ca3af;
+    padding: 3rem 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-column h3 {
+    color: #fff;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #1f2937;
+}
+
+
+
+.cta {
+    background-color: #2563eb;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+
+/* From Uiverse.io by alexmaracinaru */ 
+.rdy {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .rdy:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+  }
+  
+  .rdy span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+  }
+  
+  .rdy svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .rdy:hover:before {
+    width: 100%;
+    background: #b1dae7;
+  }
+  
+  .rdy:hover svg {
+    transform: translateX(0);
+  }
+  
+  .rdy:active {
+    transform: scale(0.95);
+  }
